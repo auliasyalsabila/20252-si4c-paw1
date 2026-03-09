@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+/* hp max-width : 600px*/
+@media screen and (max-width : 600px) {
+    /* elemen selector body */
+    body{
+        background-color : rgb(223, 0, 0);
+    }
+}
+
+img{
+    width: 100%;
+}
+
+.padding-10{
+    padding: 10px;
+}
+
+.row{
+    clear: both;
+}
+
+/* tab min-width : 600px*/
+@media screen and (min-width : 600px) {
+    /* elemen selector body */
+    body{
+        background-color : rgb(143, 50, 66);
+    }
+    /* class selektor */
+    .col-md-50{
+        width: 50%;
+        float: left;
+    }
+    .coloum-md-100{
+        width: 100%;
+    }
+}
+
+/* dekstop min-width : 922px*/
+@media screen and (min-width : 922px) {
+    /* elemen selector body */
+    body{
+        background-color : maroon;
+    }
+    /* class selektor */
+    .col-lg-25{
+        width: 25%;
+        float: left;
+    }
+    .coloum-lg-50{
+        width: 50%;
+        float: left;
+    }
+}
