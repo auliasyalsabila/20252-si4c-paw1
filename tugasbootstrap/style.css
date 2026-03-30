@@ -1,0 +1,11 @@
+/* elemen selector */
+body {
+    background-color: #810000;
+    color: #ffbebe; 
+    font-family: 'Courier New', Courier, monospace;
+}
+.txt-center { text-align: center}
+.bg-title {background-color: #ffdbdb; border-radius: 30px; }
+.txt-pink {color: #EA7B7B;}
+.p-1 {padding: 10px;}
+.m-1 {margin: 20px;}
