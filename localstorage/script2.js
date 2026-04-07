@@ -1,50 +1,71 @@
 let npm = document.getElementById("npm");
 let nama = document.getElementById("nama");
+let img = document.getElementById("img");
 
 
-function simpan(){
+function simpan() {
     console.log(npm.value)
     console.log(nama.value)
+    console.log(img.value)
 
-    // localStorage.setItem("npm",npm.value)
+
+    // localStorage.setItem("npm", npm.value)
     // localStorage.setItem("nama", nama.value)
 
-    //cek lokalstorage jika localstorage blum ada isi/value
-    if(localStorage.getItem("mahasiswa")===null){
-        //simpan array kosong
+
+    // kalo local storage blm ad isi
+    if(localStorage.getItem("mahasiswa")===null) {
+        // simpan array kosong []
         localStorage.setItem("mahasiswa", "[]")
     }
-    //panggil localstorage (konversi string ke object)
+
+
+    // panggil local storage (konversi string => obj)
     let data = JSON.parse(localStorage.getItem("mahasiswa"))
     console.log(data)
 
-    //simpan npm dan nama value ke dalam object data
+
+    //simpan value npm, nama ke dalam obj data
     data.push({
-        npm : npm.value,
-        nama : nama.value
+        npm: npm.value,
+        nama: nama.value,
+        img: img.value
     })
     console.log(data)
 
-    //simpan data terbaru ke dalam localstorage
-    //konversi dr object menjai string
+
+    //simpan data terbaru ke dalam local storage
+    // konversi dari objek menjadi string
     localStorage.setItem("mahasiswa", JSON.stringify(data))
 
+
+    //panggil tampil()
     tampil()
 }
 
-function tampil(){
-    //panggil dl local stotageny
+
+function tampil() {
+    //panggil slu local strg
     let hasil = JSON.parse(localStorage.getItem("mahasiswa"))
 
-    //clear element ul id=list-mhs
-    document.getElementById("list-mhs").innerHTML=""
 
-    //lakukan perulangan
+    //clear element ul
+    document.getElementById("list-mhs").innerHTML = " "
+
+
+    //lakukan perulangan (foreach)
     hasil.forEach(element => {
         // console.log(element)
-        document.getElementById("list-mhs").innerHTML += `<li>${element.npm} ${element.nama}<li>` 
+        document.getElementById("list-mhs").
+        innerHTML += `<div class="col-lg-4 col-md-6">
+        <h4 class="text-primary">${element.nama}</h4>
+        <h6 class="text-danger">${element.npm}</h6>
+        <img class="img-fluid" src=${element.img}/>
+        </div>`
     });
 }
 
-//jalankan function tampil
+
+//jalankan func tmpil()
 tampil()
+
