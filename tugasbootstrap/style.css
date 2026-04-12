@@ -1,11 +1,11 @@
 /* elemen selector */
 body {
     background-color: #810000;
-    color: #ffbebe; 
-    font-family: 'Courier New', Courier, monospace;
+    color: #ffd8d8; 
+    font-family: 'italic';
 }
 .txt-center { text-align: center}
-.bg-title {background-color: #ffdbdb; border-radius: 30px; }
-.txt-pink {color: #EA7B7B;}
+.bg-title {background-color: #ffd8d8; border-radius: 30px; }
+.txt-pink {color: #810000;}
 .p-1 {padding: 10px;}
 .m-1 {margin: 20px;}
